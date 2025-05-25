@@ -1,0 +1,223 @@
+
+@media all and (min-width: 1920px) {
+    .head {
+        background-position: right;
+    }
+}
+@media all and (max-width: 1520px) {
+    .head {
+        background-position: 776px;
+    }
+    .action__bid-time {
+        flex-wrap: wrap;
+        row-gap: 32px;
+    }
+}
+@media all and (max-width: 1520px) {
+    .head {
+        background-position: 676px;
+    }
+    
+}
+@media all and (max-width: 1024px) {
+    .head {
+        background-position: 476px;
+    }
+    .head__title-text {
+        font-size: 53px;
+    }
+    .action__head-image {
+        float: none;
+        margin-bottom: 32px;
+    }
+    .other-auctions__cards > :nth-last-child(-n+2) {
+        display: none;
+    }
+    .other-auctions__cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
+
+@media all and (max-width:768px) {
+    .container {
+        max-width: 768px;
+        padding: 0 15px;
+    }
+    .header__logo-link {
+        margin-right: auto;
+        padding: 20px 0;
+    }
+    .header__container {
+        flex-wrap: wrap;
+        
+    }
+    .header__menu {
+        order: 1;   
+        flex-basis: 100%;
+        border-top: 1px solid #C4C4C4;
+        padding: 10px 0;
+    }
+    .header__menu-item {
+        padding-bottom: 0;
+    }
+    .header__menu-list {
+        
+        justify-content: space-around;
+    }
+    .head {
+        background-position: 276px;
+    }
+    .head__buttons {
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+    }
+    .head__title-text {
+        font-size: 40px;
+    }
+    .head__buy {
+        width: 132px;
+        height: 50px;
+        font-size: 16px;
+        padding: 17px 38.5px;
+    }
+    .head__become-an-author {
+        width: 164px;
+        height: 50px;
+        font-size: 16px;
+        padding: 12px 21.5px;
+    }
+    .action__container {
+        padding-top: 80px;
+    }
+    .other-auctions__cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+    
+    
+    
+
+    
+
+@media all and (max-width: 550px) {
+    .action__head-image {
+        width: 296px;
+        height: 296px;
+    }
+    .action__title-name {
+        font-size: 30px;
+    }
+    .action__head-status {
+        font-size: 12px;
+        padding: 8px 14px 8px 23px;
+
+   }
+   .action__head-status::before {
+        width: 4px;
+        height: 4px;
+        top: 11.5px;
+        left: 14px;
+   }
+   .action__nickname-image {
+        width: 24px;
+        height: 24px;
+    }
+    .action__nickname-name {
+        font-size: 16px;
+    }
+    .action__sticker-name {
+        font-size: 30px;
+    }
+    .action__bid {
+        padding: 16px 28px 16px 16px;
+    }
+    .action__bid-name {
+        font-size: 16px;
+    }
+    .action__bid-price {
+        font-size: 30px;
+    }
+    .action__bid-well {
+        font-size: 16px;
+    }
+    .action__timer {
+        background-image: none;
+        padding: 16px;
+    }
+    .action__timer-name {
+        font-size: 16px;
+    }
+    .action__time-meaning-number {
+        font-size: 30px;
+        
+        }
+    .action__time-meaning-text {
+        font-size: 16px;
+        }
+    .action__link {
+        max-width: 200px;
+        font-size: 16px;
+        padding: 15px 25px;
+        text-align: center;
+    }
+    .other-auctions__cards > :nth-last-child(-n+5) {
+        display: none;
+    }
+    .other-auctions__cards {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .new-strickers__title-text {
+        font-size: 30px; 
+    }
+    .new-stickers__title-image {
+        width: 24px;
+        height: 24px;
+    }
+    
+    
+}
+
+
+@media all and (max-width:450px) {
+    .logo-image {
+    width: 75px;
+    height: 30px;
+    }
+    .container {
+        max-width: 474px;
+        padding: 0 12px;
+    }
+    .header__menu-link {
+        font-size: 16px;
+    }
+    .header__button {
+        display: none;
+    }
+    .header__balance {
+        cursor: pointer;
+    }
+    .balance-image {
+        display: inline-block;
+    }
+    .head {
+        background-image: url(/images/stickers_hero\ \(2\).png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 100vw;
+    }
+    .head__title {
+        padding-top: 120px;
+        padding-bottom: 220px;
+    }
+    .head__title-text {
+        font-size: 35px;
+    }
+    .action__container {
+        padding-top: 80px;
+    }
+    
+}
+

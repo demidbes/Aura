@@ -1,0 +1,534 @@
+
+@import url(./normalize.css);
+@font-face {
+    font-family: 'Muller-regular';
+    src: url(/fonts/Muller/MullerRegular.woff2) format('woff2');
+    font-weight: 400;   
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Muller';
+    src: url(/fonts/Muller/MullerExtraBold.woff2) format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RussoOne';
+    src: url(/fonts/RussoOne/RussoOne-Regular.woff2) format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+// Объявление переменых
+
+// Общие стили  
+body {
+    font-family: 'Muller-regular';
+    font-weight: 400;
+    line-height: 1;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    max-width: 1352px;
+    padding: 0 36px;
+    margin: 0 auto;
+}
+.logo-image {
+    width: 100px;
+    height: 40px;
+}
+.logo-link {
+}
+.balance-image { // Кошелек для низкого разрешения
+    display: none;
+}
+.title {
+    font-family: 'RussoOne';
+    font-size: 60px;
+}
+
+// Шапка сайта
+.header {  
+    min-height: 80px; 
+    &__container {
+        display: flex;
+        align-items: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }   
+    &__logo-link {
+        margin-right: 64px;
+        flex-shrink: 0;
+    }
+    &__logo-image {
+    }
+    &__menu {
+        margin-right: auto;
+    }
+    &__menu-list {
+        display: flex;
+        column-gap: 32px;
+    }
+    &__menu-item {
+        padding-bottom: 8px;
+    }
+    &__menu-link {
+        color: #07060B;
+        font-size: 20px;
+        font-family: 'Muller';
+        transition: color 0.3s;
+        &:hover {
+            color: #46F4DB;
+        }
+        &:focus {
+            color: #06060B;
+            padding: 4px 10px;
+            border: 2px solid #57D272;
+        }
+        &:active {
+            color: #57D272;
+        }
+    }
+    &__button {
+        width: 132px;
+        height: 50px;
+        background-color: #06060B;
+        border-radius: 40px;
+        color: #FFFFFF;
+        padding: 17px 31.5px;
+        font-size: 16px;
+        font-weight: 700;
+        transition: color 0.3s, background-color 0.5s;
+        cursor: pointer;
+        &:hover {
+            background-color: #46F4DB;
+            color: #06060B;
+        }
+        &:focus {
+            background-color: #46F4DB;
+            color: #06060B;
+        }
+        &:active {
+            background-color: #57D272;
+            color: #06060B;
+        }
+
+    }
+}
+
+// Верстаем head
+.head {
+    background-color: #07060B;
+    background-image: url(/images/phone_head.png);
+    background-repeat: no-repeat;
+    background-position: 976px;
+    &__container {
+        height: auto;
+        
+    }
+    &__title {
+        padding: 182px 0;
+    }
+    &__title-text {
+        font-family: 'RussoOne';
+        font-size: 70px;
+        color: #FFFFFF;
+        font-weight: 400;   
+        font-style: normal;
+        margin-bottom: 36px;
+    }
+    &__buttons {
+        display: flex;
+        column-gap: 32px;
+    }
+    &__buy {
+        width: 176px;
+        height: 70px;
+        padding: 25px 54px;
+        color: #07060B;
+        background: linear-gradient(to bottom, #46F4DB, #57D272);
+        border-radius: 40px;
+        font-size: 20px;
+        font-weight: 700;
+        &:hover {
+            background: linear-gradient(to bottom, #46F4DB, #46F4DB);
+        }
+        &:focus {
+            background: linear-gradient(to bottom, #46F4DB, #46F4DB);
+        }
+        &:active {
+            background: linear-gradient(to bottom, #57D272, #57D272);
+        }
+        
+    }   
+    &__become-an-author {
+        width: 247px;
+        height: 70px;
+        padding: 20px 49px;
+        font-size: 20px;
+        font-weight: 700;
+        color: #FFFFFF;
+        border: 5px solid transparent;
+        border-radius: 40px;
+        background: linear-gradient(#07060B, #07060B) padding-box,
+            linear-gradient(to bottom,      #46F4DB, #57D272) border-box;
+        &:hover {
+            background: linear-gradient(to bottom, #46F4DB, #57D272) padding-box,
+            linear-gradient(to bottom, #46F4DB, #57D272) border-box;
+        }
+        &:focus {
+            background: #46F4DB;
+        }
+        &:active {
+            background: #57D272;
+        }
+    }   
+}   
+
+// Верстаем аукцион
+.action {
+    &__container {
+        padding-top: 90px;
+        margin-bottom: 90px;
+    }
+    &__head-title {
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+        margin-bottom: 32px;
+    }
+    &__head-status {
+        display: inline-block;
+        border: 2px solid #D13130;
+        border-radius: 40px;
+        color: #D13130;
+        font-size: 16px;
+        padding: 9.5px 15px 9.5px 26px;
+        position: relative;
+        font-weight: 700;
+        &::before {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #D13130;
+        }
+    }
+    &__head-image {
+        float: left;
+        margin-right: 32px;
+    }
+    &__head-body {
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+    }
+    &__nickname {
+        display: inline-flex;
+        margin-right: auto;
+        align-items: center;
+        column-gap: 16px;
+        padding: 11px 16px;
+        background-color: #EDEDF2;
+        border-radius: 23px;
+        
+    }
+    &__nickname-image {
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    &__nickname-name {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    &__sticker-name {
+        font-size: 48px;
+        font-weight: 400;
+    }
+    &__bid-time {
+        display: flex;
+        column-gap: 32px;
+    }
+    &__bid {
+        padding: 32px 57px 32px 32px;
+        background-color: #EDEDF2;
+        border-radius: 40px;
+    }
+    &__bid-name {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+    &__bid-price {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+    &__bid-well {
+        font-size: 20px;
+        font-weight: 700;
+        color: #95959D;
+        
+    }
+    &__timer {
+        display: flex;
+        flex-direction: column;
+        color: #FFFFFF;
+        padding: 32px 190px 32px 32px;
+        background-color: #06060B;
+        border-radius: 40px;
+        justify-content: start;
+        background-image: url(/images/alarm-clock.svg);
+        background-repeat: no-repeat;
+        background-position: 307px;
+        background-size: 121px 121px;
+    }
+    &__timer-name {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+    &__timer-wrapper {
+        display: flex;
+        column-gap: 26px;
+    }
+    &__time-meaning {
+        display: flex;
+        flex-direction: column;
+    }
+    &__time-meaning-number {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+    &__time-meaning-text {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    &__link {
+        max-width: 296px;
+        color: #07060B;
+        background-color:#46F4DB;
+        border-radius: 40px;
+        padding: 25px 74px;
+        font-weight: 700;
+        &:hover {
+            background: linear-gradient(to bottom,#46F4DB, #57D272);
+        }   
+        &:focus {
+            background: linear-gradient(to bottom,#46F4DB, #57D272);
+        }
+        &:active {
+            background: #57D272;
+        }
+    }
+}
+
+// Верстаем другие аукционы
+.other-auctions {
+    margin-bottom: 90px;
+    &__container {
+        margin-top: 90px;
+    }
+    &__title {
+        font-family: 'RussoOne';
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 32px;
+    }
+    &__cards {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+        margin-bottom: 32px;
+    }
+    &__card {
+        background: linear-gradient(#EDEDF2 50%, #07060B 50%);
+        border-radius: 40px;
+    }
+    &__image-wrapper {
+        padding: 7px 0;
+        justify-self: center;
+    }
+    
+    &__image {
+        width: 160px;
+        height: 160px;
+        
+
+    }
+    &__author {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+        margin-bottom: 16px;
+        padding-top: 16px;
+        padding-left: 16px;
+    }
+    &__author-image {
+        width: 24px;
+        height: 24px;
+    }
+    &__author-name {
+        font-size: 16px;    
+        font-weight: 700;
+        color: #FFFFFF;
+    }
+    &__info-list {
+        padding-left: 16px;
+        padding-bottom: 32px;
+    }
+    &__info-auction-name {
+        font-size: 20px;
+        font-weight: 700;
+        color: #FFFFFF;
+        margin-bottom: 12px;
+    }
+    &__info-auction-price {
+        font-size: 20px;
+        font-weight: 700;
+        color: #46F4DB;
+        margin-bottom: 12px;
+    }
+    &__info-auction-time {
+        font-size:  16px;
+        font-weight: 700;
+        color: #95959D;
+    }
+    &__link {
+        display: flex;
+        width: 296px;
+        height: 70px;
+        justify-content: center;
+        align-items: center;
+        
+        
+        border: 5px solid #46F4DB;
+        border-radius: 40px;
+        color: #07060B;
+        font-weight: 700;
+        margin: 0 auto;
+        &:hover {
+            background-color: #46F4DB;
+        }
+        &:focus {
+            background-color: #46F4DB;
+        }
+        &:active {
+            background-color: #57D272;
+            border-color: #57D272;
+        }
+    }
+    
+}
+// Верстем блок новые стикеры
+
+.new-stickers {
+    background-color: #07060B;
+    .new-stickers__container {
+        padding: 90px 0;
+    }
+    .new-stickers__title {
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+        margin-bottom: 32px;
+    }
+    .new-stickers__title-image {
+        width: 48px;
+        height: 48px;
+    }
+
+    .new-strickers__title-text {
+        color: #FFFFFF;
+    }
+    .new-stickers__slider {
+        width: 100%;
+        overflow-x: hidden;     
+    }
+    .new-stickers__slides {
+        display: flex;
+        margin-bottom: 64px;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        will-change: transform;
+
+    }
+
+    .new-stickers__slide-1 {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 300px;
+        grid-template-columns: 1fr 1fr 2fr;
+        column-gap: 28px;
+        flex: 0 0 100%;
+
+    }
+    .new-stickers__slide-image {
+        object-fit: contain;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+    }
+    .new-stickers__slide-2 {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 300px;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 28px;
+        flex: 0 0 100%;
+    }
+    .new-stickers__slide-3 {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 300px;
+        grid-template-columns: 1fr 1fr 2fr;
+        column-gap: 28px;
+        flex: 0 0 100%;
+    }
+    .new-stickers__slide-4 {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 300px;
+        grid-template-columns: 1fr;
+        flex: 0 0 100%;
+    }
+    .new-stickers__slide-control {
+        display: flex;
+        column-gap: 20px;
+        justify-content: center;
+    }
+    .new-stickers__slide-button {
+        color:  #FFFFFF;
+        font-weight: 700;
+        font-size: 16px;
+        padding: 10px 24px;
+        background-color: #06060B;
+        border: 2px solid #D13130;
+        border-radius: 40px;
+        cursor: pointer;
+    }
+    .new-stickers__slide-button--active {
+        background-color: #D13130;
+    }
+}
+
+[class*="new-stickers__slide-"] {
+    transition: min-width 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
